@@ -23,17 +23,17 @@
     </files>
 
     <positions>
-        <position>logo</position>
-        <position>menu</position>
-        <position>socialNetworks</position>
-        <position>search</position>
-        <position>header</position>
-        <position>block-1</position>
-        <position>block-2</position>
-        <position>block-3</position>
-        <position>block-4</position>
-        <position>news</position>
-        <position>footer</position>
+        <position>TPL_TRP_POSITION_LOGO</position>
+        <position>TPL_TRP_POSITION_MENU</position>
+        <position>TPL_TRP_POSITION_SOCIAL_NETWORKS</position>
+        <position>TPL_TRP_POSITION_SEARCH</position>
+        <position>TPL_TRP_POSITION_HEADER</position>
+        <position>TPL_TRP_POSITION_BLOCK-1</position>
+        <position>TPL_TRP_POSITION_BLOCK-2</position>
+        <position>TPL_TRP_POSITION_BLOCK-3</position>
+        <position>TPL_TRP_POSITION_BLOCK-4</position>
+        <position>TPL_TRP_POSITION_NEWS</position>
+        <position>TPL_TRP_POSITION_FOOTER</position>
     </positions>
 
     <languages folder="language">
