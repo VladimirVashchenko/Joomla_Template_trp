@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.0" type="template" client="site">
+    <name>trp</name>
+    <description>Шаблон для сайта trp</description>
+    <version>1.0</version>
+    <creationDate>June 2016</creationDate>
+    <author>author</author>
+    <authorEmail>user@site.com</authorEmail>
+    <authorUrl>http://www.example.com</authorUrl>
+    <license>GNU/GPL</license>
+    <copyright>Копирайт</copyright>
+
+    <files>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>html</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+    </files>
+
+    <positions>
+        <position>logo</position>
+        <position>menu</position>
+        <position>socialNetworks</position>
+        <position>search</position>
+        <position>header</position>
+        <position>block-1</position>
+        <position>block-2</position>
+        <position>block-3</position>
+        <position>block-4</position>
+        <position>news</position>
+        <position>footer</position>
+    </positions>
+</extension>
