@@ -34,7 +34,13 @@
         <position>block-3</position>
         <position>block-4</position>
         <position>news</position>
+        <position>news-article</position>
         <position>footer</position>
+        <position>footer-link-1</position>
+        <position>footer-link-2</position>
+        <position>footer-link-3</position>
+        <position>footer-link-4</position>
+        <position>footer-link-5</position>
     </positions>
 
     <languages folder="language">
