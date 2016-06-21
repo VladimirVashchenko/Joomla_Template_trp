@@ -122,12 +122,12 @@ h6 {
         margin-top: 110px;
     }
         .logo {
-            width: 30%;
+            width: /*30%*/300px;
         }
         .right-menu {
             display: inline-block;
             vertical-align: bottom;
-            width: 69.5%;
+            width: 695px;
             text-align: right;
         }
             .search-div {
@@ -236,34 +236,34 @@ h6 {
         margin-bottom: 20px;;
     }
     .services{
-        text-align: center;
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 20px;
     }
         .service{
-            width: 22%;
-            height: inherit;
-            display: inline-block;
-            float: left;
+            width: 220px;
             text-align: center;
             line-height:1.4;
             background-color: #f5f5f5;
         }
-        #service2{
-            margin-left: 4%;
-            margin-right: 2%;
-        }
-        #service3{
-            margin-left: 2%;
-            margin-right: 4%;
-        }
+            .service:nth-child(4n+2) {
+                margin-left: 40px;
+                margin-right: 20px;
+            }
+            .service:nth-child(4n+3) {
+                margin-left: 20px;
+                margin-right: 40px;
+            }
+            .service:nth-child(n+5){
+                margin-top: 20px;
+            }
             .services  a {
                  color: black;
                  text-decoration: none;
             }
             .service hr {
-                width: 88%;
-                margin: 0 6% 0 6%;
+                width: 193px;
+                margin: 0 12px 0 12px;
             }
             .service p {
                 padding:  0 10px 10px 10px;
@@ -281,7 +281,7 @@ h6 {
             .news-hr {
                 display: inline-block;
                 vertical-align: middle;
-                width: 39.78%;
+                width: 397px; !important;
                 border: 0;
                 height: 4px;
                 background-color: black;
@@ -303,9 +303,6 @@ h6 {
         height: 80px;
         background-color: #ededed;
     }
-        .copyr {
-            vertical-align: middle;
-        }
         .footer-link {
             display: inline-block;
             text-align: center;
