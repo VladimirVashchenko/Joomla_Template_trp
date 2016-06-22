@@ -258,10 +258,15 @@ body, .header, #search-box, .news-content {
         margin-bottom: 20px;;
     }
     .services{
-        display: flex;
-        flex-wrap: wrap;
         margin-bottom: 20px;
     }
+        .services > ul  {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .services > ul > li {
+            display: flex;
+        }
         .service{
             width: 220px;
             text-align: center;
@@ -276,15 +281,15 @@ body, .header, #search-box, .news-content {
         .service:hover{
             transform: scale(1.02);
         }
-            .service:nth-child(4n+2) {
+            .services > ul > li:nth-child(4n+2) {
                 margin-left: 40px;
                 margin-right: 20px;
             }
-            .service:nth-child(4n+3) {
+            .services > ul > li:nth-child(4n+3) {
                 margin-left: 20px;
                 margin-right: 40px;
             }
-            .service:nth-child(n+5){
+            .services > ul > li:nth-child(n+5){
                 margin-top: 20px;
             }
             .services  a {
