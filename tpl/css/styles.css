@@ -66,14 +66,22 @@ table {
 /*============================*/
 :root{
     --main-width: 1000px;
-    --main-color: #f5f5f5;
+    --main-background-color: white;
+    --theme-color: #f5f5f5;
+    --line-color:#bababa;
+    --font-color: black;
+    --font-color-with-background: #000000;
     --accent-color: #FF0066;
     --highlight-color: rgba(132, 188, 255, 0.4);
-    --line-color:#bababa;
+
+    --transitions-transform: 0.05s ease-in;
+    --transitions-highlights: 0.3s ease-out;
+    --transitions-visibility: 0.07s ease-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Arial;
+    color: var(--font-color);
 }
 
 h1 {
@@ -105,6 +113,9 @@ h6 {
     margin: 0;
 }
 
+body, .header, #search-box, .news-content {
+    background: var(--main-background-color);
+}
 .main-div {
     width: var(--main-width);
     margin: 0 auto;
@@ -117,7 +128,7 @@ h6 {
         height: 84px;
         width: var(--main-width);
         position: fixed;
-        background: white;
+        /*background: white;*/
     }
 
     .container {
@@ -148,10 +159,16 @@ h6 {
                     padding-right: 5px;
                     font-size: 16px;
                     font-family: Arial;
-                    border: 0 none;
+                    border: 1px solid var(--main-background-color);
                     height: 24px;
                     outline: none;
-                    box-sizing: border-box;
+                    /*box-sizing: border-box;*/
+
+                    -transition: all var(--transitions-visibility);
+                    -webkit-transition: all var(--transitions-visibility);
+                    -moz-transition: all var(--transitions-visibility);
+                    -o-transition: all var(--transitions-visibility);
+                    transition: all var(--transitions-visibility);
                 }
                 #search-button {
                     border: 0 none;
@@ -161,7 +178,7 @@ h6 {
                     margin-left: 3px;
                     cursor: pointer;
                     padding: 0;
-                    float: right;
+                    /*float: right;*/
                 }
                 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
                     text-align: right;
@@ -176,7 +193,7 @@ h6 {
                     text-align: right;
                 }
                 #search-box:focus {
-                    border: 1px solid #4067c1;
+                    border: 1px solid var(--line-color);
                 }
                 #search-box:focus:-moz-placeholder {
                     color: transparent;
@@ -208,19 +225,18 @@ h6 {
                             display: inline-block;
                             line-height: 25px;
                             padding: 10px 10px 10px 10px;
-                            color: #000;
+                            color: var(--font-color);
                             text-decoration: none;
-                            background-color: #ffffff;
-                            -webkit-transition: background-color 0.3 ease-out;
-                            -moz-transition: background-color 0.3s ease-out;
-                            -o-transition: background-color 0.3s ease-out;
-                            transition: background-color 0.3s ease-out;
+                            -webkit-transition: background-color var(--transitions-highlights);
+                            -moz-transition: background-color var(--transitions-highlights);
+                            -o-transition: background-color var(--transitions-highlights);
+                            transition: background-color var(--transitions-highlights);
                         }
                         .main-menu > li > a:hover {
                                             background-color: var(--highlight-color);
                                         }
                         .main-menu > li > a:visited {
-                                            color: #000;
+                                            color: var(--font-color);
                         }
                         .main-menu > li > a.now {
                             color: var(--accent-color);
@@ -250,12 +266,11 @@ h6 {
             width: 220px;
             text-align: center;
             line-height:1.4;
-            background-color: var(--main-color);
-
-            -webkit-transition: transform 0.05 ease-out;
-            -moz-transition: transform 0.05s ease-out;
-            -o-transition: transform 0.05s ease-out;
-            transition: transform 0.05s ease-out;
+            background-color: var(--theme-color);
+            -webkit-transition: transform var(--transitions-transform);
+            -moz-transition: transform var(--transitions-transform);
+            -o-transition: transform var(--transitions-transform);
+            transition: transform var(--transitions-transform);
         }
 
         .service:hover{
@@ -283,8 +298,12 @@ h6 {
                 border: 0;
                 background-color: var(--line-color);
             }
+            .service h1 {
+                color: var(--font-color-with-background);
+            }
             .service p {
                 padding:  0 10px 10px 10px;
+                color: var(--font-color-with-background);
             }
             .service img {
                 height: 40px;
@@ -313,13 +332,13 @@ h6 {
         .news-content {
             height:300px;
             overflow: hidden;
-            background-color: var(--main-color);
+            /*background-color: var(--theme-color);*/
             margin-bottom: 20px;
         }
     .footer {
         overflow: hidden;
         height: 80px;
-        background-color: var(--main-color);
+        background-color: var(--theme-color);
     }
         .footer-link {
             display: inline-block;
@@ -329,9 +348,12 @@ h6 {
             top:10%;
             width: 19.6%;
         }
+            .footer h1 {
+                color: var(--font-color-with-background);
+            }
             .footer-link a {
                 text-decoration: none;
-                color: #000;
+                color: var(--font-color-with-background);
             }
                 .footer-icon {
                     height: 25px;
@@ -339,11 +361,11 @@ h6 {
                 }
             .footer-link-wrap {
                 display: inline-block;
-                background-color: var(--main-color);
-                -webkit-transition: transform 0.05 ease-out;
-                -moz-transition: transform 0.05s ease-out;
-                -o-transition: transform 0.05s ease-out;
-                transition: transform 0.05s ease-out;
+                background-color: var(--theme-color);
+                -webkit-transition: transform var(--transitions-transform);
+                -moz-transition: transform var(--transitions-transform);
+                -o-transition: transform var(--transitions-transform);
+                transition: transform var(--transitions-transform);
             }
             .footer-link-wrap:hover {
                 transform: scale(1.1);
