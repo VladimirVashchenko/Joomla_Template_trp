@@ -28,6 +28,9 @@
 
     <positions>
         <position>header</position>
+        <position>search</position>
+        <position>menu</position>
+
         <position>promo</position>
         <position>services</position>
         <position>news</position>
@@ -103,7 +106,7 @@
                        alpha="true"
                        default="rgba(132, 188, 255, 0.4)"
                        label="Highlight on mose-over"
-                       description="Background color for selectable elements under mouse pointer"/>
+                       description="Background color for menu"/>
             </fieldset>
         </fields>
     </config>
