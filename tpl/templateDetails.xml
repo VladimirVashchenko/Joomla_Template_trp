@@ -40,73 +40,81 @@
     <config>
         <fields name="params">
             <fieldset name="advanced">
-                <field name="site_name"
-                       type="text"
-                       label="Site name"
-                       description="Obvious">
+                <field
+                        name="site_name"
+                        type="text"
+                        label="Site name"
+                        description="Obvious"/>
 
-                </field>
+                <field
+                        name="site_description"
+                        type="textarea"
+                        label="Site description"
+                        description="What information your site has"/>
 
-                <field name="site_description"
-                       type="textarea"
-                       label="Site description"
-                       description="What information your site has"/>
+                <field
+                        name="main_background"
+                        type="color"
+                        alpha="true"
+                        default="#ffffff"
+                        label="Background"
+                        description="Site background"/>
 
-                <field name="main_background"
-                       type="color"
-                       alpha="true"
-                       default="#ffffff"
-                       label="Background"
-                       description="Site background"/>
+                <field
+                        name="theme"
+                        type="color"
+                        alpha="true"
+                        default="#f5f5f5"
+                        label="Theme"
+                        description="Site theme"/>
 
-                <field name="theme"
-                       type="color"
-                       alpha="true"
-                       default="#f5f5f5"
-                       label="Theme"
-                       description="Site theme"/>
+                <field
+                        name="header_background"
+                        type="color"
+                        alpha="true"
+                        default="#ffffff"
+                        label="Header background"
+                        description="Header background"/>
 
-                <field name="header_background"
-                       type="color"
-                       alpha="true"
-                       default="#ffffff"
-                       label="Header background"
-                       description="Header background"/>
+                <field
+                        name="lines"
+                        type="color"
+                        alpha="true"
+                        default="#bababa"
+                        label="Separators"
+                        description="Horizontal lines"/>
 
-                <field name="lines"
-                       type="color"
-                       alpha="true"
-                       default="#bababa"
-                       label="Separators"
-                       description="Horizontal lines"/>
+                <field
+                        name="font_color"
+                        type="color"
+                        alpha="true"
+                        default="#000000"
+                        label="Font color"
+                        description="Font color for fonts with no background"/>
 
-                <field name="font_color"
-                       type="color"
-                       alpha="true"
-                       default="#000000"
-                       label="Font color"
-                       description="Font color for fonts with no background"/>
+                <field
+                        name="font_color_with_background"
+                        type="color"
+                        alpha="true"
+                        default="#000000"
+                        label="Font color with background"
+                        description="Font color for fonts with background"/>
 
-                <field name="font_color_with_background"
-                       type="color"
-                       alpha="true"
-                       default="#000000"
-                       label="Font color with background"
-                       description="Font color for fonts with background"/>
+                <field
+                        name="accent"
+                        type="color"
+                        alpha="true"
+                        default="#FF0066"
+                        label="Accent color"
+                        description="Font color for active menu"/>
 
-                <field name="accent"
-                       type="color"
-                       alpha="true"
-                       default="#FF0066"
-                       label="Accent color"
-                       description="Font color for active menu"/>
-
-                <field name="highlight"
-                       type="color"
-                       alpha="true"
-                       default="rgba(132, 188, 255, 0.4)"
-                       label="Highlight on mose-over"
-                       description="Background color for menu"/>
+                <field
+                        name="highlight"
+                        type="color"
+                        alpha="true"
+                        default="rgba(132, 188, 255, 0.4)"
+                        label="Highlight on mose-over"
+                        description="Background color for menu"/>
             </fieldset>
         </fields>
     </config>

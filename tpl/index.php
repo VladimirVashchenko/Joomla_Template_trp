@@ -3,6 +3,21 @@
 $doc->addStylesheet(JUri::base(TRUE) . '/templates/' . $doc->template . '/css/styles.css');
 //print_r($doc);
 ?>
+<?php
+$app = JFactory::getApplication();
+$templateparams = $app->getTemplate(true)->params;
+$this->addStyleDeclaration("
+
+        :root{
+            --main-background-color: " . $templateparams->get('main_background') . ";
+            --header-color: " . $templateparams->get('header_background') . ";
+            --theme-color: " . $templateparams->get('theme') . ";
+            --line-color:" . $templateparams->get('lines') . ";
+            --font-color: " . $templateparams->get('font_color') . ";
+            --font-color-with-background: " . $templateparams->get('font_color_with_background') . ";
+            --accent-color: " . $templateparams->get('accent') . ";
+            --highlight-color: " . $templateparams->get('highlight') . ";
+        }"); ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,7 +35,7 @@ $doc->addStylesheet(JUri::base(TRUE) . '/templates/' . $doc->template . '/css/st
         <div class="right-menu">
             <jdoc:include type="modules" name="search"/>
             <div class="menu-div">
-                <jdoc:include type="modules" name="header"/>
+                <jdoc:include type="modules" name="menu"/>
                 <a class="fb-logo-link" href="#">
                     <div class="fb-logo-div">
                         <img class="fb-logo" src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/facebook-logo.svg"
