@@ -64,6 +64,93 @@ table {
 }
 
 /*============================*/
+/*fallback*/
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+.main-div {
+    width: 1000px;
+}
+.header {
+    width: 1000px;
+    background-color: white;
+    border-bottom: 1px solid #bababa;
+}
+#search-box {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+
+    -transition: all 0.07s ease-out;
+    -webkit-transition: all 0.07s ease-out;
+    -moz-transition: all 0.07s ease-out;
+    -o-transition: all 0.07s ease-out;
+    transition: all 0.07s ease-out;
+}
+#search-button {
+    background-color: #ffffff;
+}
+.main-menu > li > a {
+    color: black;
+    -webkit-transition: background-color 0.23s ease-out;
+    -moz-transition: background-color 0.23s ease-out;
+    -o-transition: background-color 0.23s ease-out;
+    transition: background-color 0.23s ease-out;
+}
+.main-menu > li > a:hover {
+    background-color: rgba(132, 188, 255, 0.4);
+}
+.main-menu > li > a:visited {
+    color: black;
+}
+.main-menu > li.active > a {
+    color: #FF0066;
+}
+.fb-logo-link {
+    -webkit-transition: transform 0.05s ease-in;
+    -moz-transition: transform 0.05s ease-in;
+    -o-transition: transform 0.05s ease-in;
+    transition: transform 0.05s ease-in;
+}
+.fb-logo-link > svg {
+    fill: black;
+}
+.service{
+    background-color: #f5f5f5;
+    -webkit-transition: transform 0.05s ease-in;
+    -moz-transition: transform 0.05s ease-in;
+    -o-transition: transform 0.05s ease-in;
+    transition: transform 0.05s ease-in;
+}
+.service hr {
+    background-color: #bababa;
+}
+.service h1 {
+    color: #000000;
+}
+.service p {
+    color: #000000;
+}
+.news-hr {
+    background-color: #bababa;
+}
+.footer {
+    background-color: #f5f5f5;
+}
+.footer h1 {
+    color: #000000;
+}
+.footer-link a {
+    color: #000000;
+}
+.footer-link-wrap {
+    background-color: #f5f5f5;
+    -webkit-transition: transform 0.05s ease-in;
+    -moz-transition: transform 0.05s ease-in;
+    -o-transition: transform 0.05s ease-in;
+    transition: transform 0.05s ease-in;
+}
+/*fallback end*/
+
 :root{
     --main-width: 1000px;
     --main-background-color: #ffffff;
@@ -132,11 +219,9 @@ body, .header, #search-box, .news-content {
     }
         .logo-link {
             position: absolute;
+            top:0;
             bottom: 4px;
         }
-            .logo {
-                width: 300px;
-            }
         .right-menu {
             position: absolute;
             right: 0;
@@ -176,12 +261,13 @@ body, .header, #search-box, .news-content {
                 #search-button {
                     border: 0 none;
                     background-color: var(--header-color);
-                    width: 18px;
-                    height: 18px;
                     margin-left: 3px;
                     margin-right: 3px;
                     cursor: pointer;
                     padding: 0;
+                }
+                #search-button:focus {
+                    outline: 0;
                 }
                 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
                     text-align: right;
@@ -248,24 +334,25 @@ body, .header, #search-box, .news-content {
                 .fb-logo-link {
                     width: 20px;
                     padding: 5px 2px;
-                    display: inline-block;text-align: center;
-
-                    -webkit-transition: transform var(--transitions-transform);
-                    -moz-transition: transform var(--transitions-transform);
-                    -o-transition: transform var(--transitions-transform);
-                    transition: transform var(--transitions-transform);
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: middle;
                 }
-                .fb-logo-link:hover {
-                    transform: scale(1.2);
-                }
-                    .fb-logo-div{
-                        display: inline-block;
+                    .fb-logo-link > svg {
+                        fill: var(--font-color);
+                        -webkit-transition: transform var(--transitions-transform);
+                        -moz-transition: transform var(--transitions-transform);
+                        -o-transition: transform var(--transitions-transform);
+                        transition: transform var(--transitions-transform);
                     }
-                        .fb-logo{
-                            height: 16px;
-                            width:8px;
-                            vertical-align: middle;
-                        }
+
+                    .fb-logo-link:hover > svg {
+                        transform: scale(1.2);
+                    }
+
+                .fb-logo-link > svg {
+                    fill: var(--font-color);
+                }
     .container {
         margin-top: 110px;
     }
@@ -337,7 +424,7 @@ body, .header, #search-box, .news-content {
                 text-align: center;
             }
                 .news-hr {
-                    width: 397px; !important;
+                    width: 397px;
                     height: 4px;
                     border: 0;
                     display: inline-block;
@@ -353,7 +440,6 @@ body, .header, #search-box, .news-content {
             .news-content {
                 height:300px;
                 overflow: hidden;
-                /*background-color: var(--theme-color);*/
                 margin-bottom: 20px;
             }
         .footer {
