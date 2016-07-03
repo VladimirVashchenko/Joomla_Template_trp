@@ -10,14 +10,17 @@
 defined('_JEXEC') or die;
 ?>
 <ul class="latestnews">
-<?php foreach ($list as $item) :  ?>
-	<li itemscope itemtype="https://schema.org/Article">
-		<a href="<?php echo $item->link; ?>" itemprop="url">
+    <?php foreach ($list as $item) : ?>
+        <li itemscope itemtype="https://schema.org/Article">
+            <a href="<?php echo $item->link; ?>" itemprop="url">
 			<span itemprop="name">
 				<?php echo $item->title; ?>
 			</span>
-		</a>
-		<p><?php echo $item->publish_up ?></p>
-	</li>
-<?php endforeach; ?>
+            </a>
+            <p><?php $date_time = explode(' ', $item->publish_up);
+                $date = explode('-', $date_time[0]);
+                echo $date[2] . '.' . $date[1] . '.' . $date[0];
+                ?></p>
+        </li>
+    <?php endforeach; ?>
 </ul>
