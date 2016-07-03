@@ -1,7 +1,6 @@
 <?php defined("_JEXEC") or die(); ?>
 <?php $doc = JFactory::getDocument();
 $doc->addStylesheet(JUri::base(TRUE) . '/templates/' . $doc->template . '/css/styles.css');
-//print_r($doc);
 ?>
 <?php
 $app = JFactory::getApplication();
@@ -41,84 +40,93 @@ $this->addStyleDeclaration("
             </svg>
         </a>
         <div class="right-menu">
-            <jdoc:include type="modules" name="search"/>
+            <?php if($doc->countModules('search')):?>
+                <jdoc:include type="modules" name="search"/>
+            <?php endif;?>
             <div class="menu-div">
-                <jdoc:include type="modules" name="menu"/>
+                <?php if($doc->countModules('menu')):?>
+                    <jdoc:include type="modules" name="menu"/>
+                <?php endif;?>
                 <a class="fb-logo-link" href="#">
-<!--                    <div class="fb-logo-div">-->
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="20" viewBox="0 0 9 20"><path d="M9.41 5.43L9.41 8.13h-2.84v11.87H2.38L2.38 8.14C1.59 8.14 0.8 8.14 0.01 8.14L0.01 5.43c0.77 0 1.54 0 2.31 0 0-0.5 0.01-0.99 0.01-1.49C2.33 3.42 2.38 3.01 2.5 2.62c0.09-0.31 0.21-0.53 0.26-0.65C2.91 1.69 3.29 0.99 4.08 0.55c0.43-0.24 0.82-0.31 1.25-0.38 0.58-0.1 1.02-0.08 1.32-0.07C7.57 0.12 8.49 0.14 9.41 0.16c0 0.97 0.01 1.93 0.01 2.9 -0.77 0-1.33 0-1.73-0.01 -0.28 0-0.54-0.01-0.76 0.17C6.66 3.45 6.63 3.83 6.63 3.98L6.64 5.43 9.41 5.43z"/></svg>
-<!--                    </div>-->
                 </a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <jdoc:include type="component" />
-        <div class="promo">
-            <jdoc:include type="modules" name="promo"/>
+    <div class="content-area">
+        <?php if($option):?>
+            <div class="content">
+                <jdoc:include type="component" />
+            </div>
+        <?php endif;?>
+        <?php if($doc->countModules('promo')):?>
+            <div class="promo">
+                <jdoc:include type="modules" name="promo"/>
+                <img width="1000" src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/slide.jpg" alt=""/>
+            </div>
+        <?php endif;?>
 
-            <img width="1000" src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/slide.jpg" alt=""/>
-        </div>
+        <?php if($doc->countModules('services')):?>
+            <div class="services">
+                <ul>
+                    <li class="service">
+                        <a href="#">
+                            <h1>Блок1</h1>
+                            <hr>
+                            <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
+                            <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
+                                пикселов.
+                                Кстати
+                                вы
 
-        <div class="services">
-            <ul>
-                <li class="service">
-                    <a href="#">
-                        <h1>Блок1</h1>
-                        <hr>
-                        <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
-                        <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
-                            пикселов.
-                            Кстати
-                            вы
-
-                            длиной нашей шапки. В большинстве шаблонов ширина его задается в настройках. Заходим
-                            в наш
-                            шаблон и </p>
-                    </a>
-                </li>
-                <li class="service">
-                    <a href="#">
-                        <h1>Блок2</h1>
-                        <hr>
-                        <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
-                        <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
-                            пикселов.
-                            Кстатиах. Заходим в наш
-                            шаблон и</p>
-                    </a>
-                </li>
-                <li class="service">
-                    <a href="#">
-                        <h1>Блок3</h1>
-                        <hr>
-                        <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
-                        <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
-                            пикселов.
-                            Кстати
-                            вы
-                            В большинстве шаблонов ширина его задается в настройках. Заходим в наш
-                            шаблон и</p>
-                    </a>
-                </li>
-                <li class="service">
-                    <a href="#">
-                        <!--<div>-->
-                        <h1>Блок4</h1>
-                        <hr>
-                        <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
-                        <p>что за его позиционир можете изменить ширину до нужных вам размеров в этом файле CSS.
-                            Теперь необходимо
-                            определиться с
-                            длиной нашей шапки. В большинстве шаблонов ширина его задается в настройках. Заходим
-                            в
-                            наш
-                            шаблон и</p>
-                        <!--</div>-->
-                    </a>
-                </li>
-            </ul>
-        </div>
+                                длиной нашей шапки. В большинстве шаблонов ширина его задается в настройках. Заходим
+                                в наш
+                                шаблон и </p>
+                        </a>
+                    </li>
+                    <li class="service">
+                        <a href="#">
+                            <h1>Блок2</h1>
+                            <hr>
+                            <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
+                            <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
+                                пикселов.
+                                Кстатиах. Заходим в наш
+                                шаблон и</p>
+                        </a>
+                    </li>
+                    <li class="service">
+                        <a href="#">
+                            <h1>Блок3</h1>
+                            <hr>
+                            <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
+                            <p>что за его позиционирование отвечает файл layout.css и его высота составляет 110
+                                пикселов.
+                                Кстати
+                                вы
+                                В большинстве шаблонов ширина его задается в настройках. Заходим в наш
+                                шаблон и</p>
+                        </a>
+                    </li>
+                    <li class="service">
+                        <a href="#">
+                            <!--<div>-->
+                            <h1>Блок4</h1>
+                            <hr>
+                            <img src="<?php echo JUri::base(TRUE)."/templates/".$doc->template;?>/images/Medal-icon.png" alt=""/>
+                            <p>что за его позиционир можете изменить ширину до нужных вам размеров в этом файле CSS.
+                                Теперь необходимо
+                                определиться с
+                                длиной нашей шапки. В большинстве шаблонов ширина его задается в настройках. Заходим
+                                в
+                                наш
+                                шаблон и</p>
+                            <!--</div>-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <?php endif;?>
 
         <div class="news">
             <div class="news-top">
@@ -127,7 +135,7 @@ $this->addStyleDeclaration("
                 <hr class="news-hr">
             </div>
             <div class="news-content">
-
+                <jdoc:include type="modules" name="news"/>
             </div>
         </div>
 
